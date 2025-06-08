@@ -1,0 +1,275 @@
+# .gitignore para Otimização Aplicada à Ciência de Dados
+# Prof. Maurizio Prizzi - Repositório Educacional
+
+# ==============================================================================
+# ARQUIVOS PYTHON - EXCLUIR TODOS
+# ==============================================================================
+*.py
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+
+# ==============================================================================
+# JUPYTER NOTEBOOK
+# ==============================================================================
+# Checkpoints dos notebooks
+.ipynb_checkpoints/
+
+# Arquivos temporários do Jupyter
+.jupyter/
+*.ipynb_checkpoints
+
+# Jupyter Notebook conversões automáticas
+*.py.bak
+
+# ==============================================================================
+# PYTHON VIRTUAL ENVIRONMENTS
+# ==============================================================================
+# Ambientes virtuais
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.env
+.venv
+
+# Conda environments
+conda-meta/
+.conda/
+
+# ==============================================================================
+# PYTHON PACKAGE/DISTRIBUTION
+# ==============================================================================
+# Build directories
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# ==============================================================================
+# DESENVOLVIMENTO E TESTES
+# ==============================================================================
+# Coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# ==============================================================================
+# DADOS E RESULTADOS
+# ==============================================================================
+# Datasets grandes (não versionar)
+*.csv
+*.xlsx
+*.xls
+*.json
+*.parquet
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+
+# Resultados de otimização
+results/
+output/
+outputs/
+data/raw/
+data/processed/
+
+# Gráficos gerados automaticamente
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+plots/
+figures/
+
+# ==============================================================================
+# SISTEMA OPERACIONAL
+# ==============================================================================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ==============================================================================
+# EDITORES DE CÓDIGO
+# ==============================================================================
+# VSCode
+.vscode/
+*.code-workspace
+.history/
+
+# PyCharm
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ==============================================================================
+# LOGS E TEMPORÁRIOS
+# ==============================================================================
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Temporary folders
+tmp/
+temp/
+
+# ==============================================================================
+# CONFIGURAÇÕES ESPECÍFICAS
+# ==============================================================================
+# Arquivos de configuração local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+config.local.json
+
+# Chaves e segredos
+*.key
+*.pem
+secrets/
+credentials/
+
+# ==============================================================================
+# FERRAMENTAS DE BUILD/DEPLOY
+# ==============================================================================
+# Docker
+.dockerignore
+Dockerfile.local
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# ==============================================================================
+# ARQUIVOS PERMITIDOS (FORÇAR INCLUSÃO)
+# ==============================================================================
+# Garantir que estes sejam sempre incluídos
+!requirements.txt
+!*.md
+!*.ipynb
+!*.txt
+!*.yml
+!*.yaml
+!*.json
+!LICENSE
+!.gitignore
+
+# ==============================================================================
+# EXCEÇÕES ESPECÍFICAS DO PROJETO
+# ==============================================================================
+# Permitir arquivos Python específicos se necessário (descomente se precisar)
+# !setup.py
+# !manage.py
+# !__init__.py
+
+# Permitir datasets pequenos específicos se necessário
+# !data/samples/iris.csv
+# !data/examples/*.csv
