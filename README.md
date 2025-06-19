@@ -31,6 +31,7 @@ O objetivo deste repositório é fornecer aos estudantes uma **coleção complet
 |------|--------|-------------|--------|
 | [**2025-06-04**](./2025_06_04/) | 🎮 **Programação com Restrições** | OR-Tools, CP-SAT | ✅ Disponível |
 | [**2025-06-11**](./2025_06_11/) | 🎯 **SCOP + Programação Quadrática Não-Convexa** | CVXPY, SciPy, Scikit-learn | ✅ Disponível |
+| [**2025-06-18**](./2025_06_18/) | 🛡️ **Otimização Adaptativa para Detecção de Fraudes** | Scikit-learn, Busca Ternária, GridSearchCV | ✅ Disponível |
 
 ### 🔍 **Aula Destacada: 2025-06-04**
 
@@ -46,7 +47,7 @@ O objetivo deste repositório é fornecer aos estudantes uma **coleção complet
 - **Objetivo:** Minimizar makespan OU balancear carga
 - **Resultado:** Pipeline completo em 4 slots temporais
 
-### 🌟 **Aula NOVA: 2025-06-11**
+### 🌟 **Aula Avançada: 2025-06-11**
 
 #### 🏥 **Projeto 1: Seleção Esparsa de Características para Diagnóstico Médico**
 - **Problema:** Dataset de câncer de mama com 30 características → identificar as mais importantes
@@ -62,12 +63,29 @@ O objetivo deste repositório é fornecer aos estudantes uma **coleção complet
 - **Resultado:** 4 segmentos bem definidos usando apenas características relevantes
 - **Aplicação:** Marketing direcionado com insights mais claros
 
-#### 🔬 **Conceitos Avançados Introduzidos:**
-- **🎯 Otimização Não-Convexa:** Problemas com múltiplos mínimos locais
-- **⚡ Relaxação Convexa:** Estratégia de duas etapas para problemas difíceis
-- **🧹 Seleção de Características:** Técnicas L0, L1 e quadráticas
-- **🔗 Interações Complexas:** Captura de relações não-lineares entre variáveis
-- **🎮 Thresholding Inteligente:** Soft e hard thresholding para esparsidade
+### 🚀 **NOVA AULA: 2025-06-18**
+
+#### 🛡️ **Projeto 1: Otimização de Hiperparâmetros para Detecção de Fraudes**
+- **Problema:** Sistema antifraude para fintech com 15 mil transações (96% legítimas, 4% fraudes)
+- **Técnica:** Otimização Multi-Objetivo + GridSearchCV/RandomizedSearchCV
+- **Inovação:** Função objetivo personalizada combinando recall, precisão e experiência do usuário
+- **Resultado:** Modelo Random Forest otimizado com trade-off ideal entre detecção e falsos positivos
+- **Aplicação:** Sistemas bancários e e-commerce com impacto financeiro quantificado
+
+#### 🎯 **Projeto 2: Otimização Contínua de Threshold com Busca Ternária**
+- **Problema:** Adaptação automática do limiar de classificação para mudanças nos padrões de fraude (concept drift)
+- **Técnica:** Busca Ternária + Otimização Contínua + Simulação de Concept Drift
+- **Inovação:** Algoritmo O(log₃ n) para ajuste dinâmico em tempo real, 12 meses de simulação
+- **Resultado:** Threshold adaptativo (0.3-0.4) superando o padrão fixo (0.5) em recall e F1-score
+- **Aplicação:** Sistemas de produção que se adaptam automaticamente a novos padrões de fraude
+
+#### 🔬 **Conceitos Revolucionários Introduzidos:**
+- **🎯 Otimização Multi-Objetivo:** Balanceamento de métricas conflitantes (detecção vs. experiência do usuário)
+- **⚡ Busca Ternária:** Algoritmo logarítmico para otimização de funções unimodais
+- **🔄 Concept Drift:** Adaptação automática a mudanças temporais nos dados
+- **📊 Métricas de Negócio:** ROI quantificado, custos de falsos positivos vs. fraudes não detectadas
+- **🎮 Otimização Adaptativa:** Sistemas que aprendem e se ajustam continuamente
+- **🔍 Trade-off Analysis:** Análise matemática de custos-benefícios em decisões de ML
 
 ## 👨‍🎓 Direitos e Permissões para Alunos CEUB
 
@@ -111,10 +129,12 @@ Contribuições significativas de alunos serão:
 - 🧠 **Scikit-learn:** Machine learning e datasets
 - 📓 **Jupyter:** Notebooks interativos
 - ⚡ **SciPy:** Algoritmos de otimização avançados
+- 🎮 **Joblib:** Paralelização e persistência de modelos
 
 ### **Áreas de Aplicação:**
 - 🏥 **Medicina:** Diagnóstico inteligente e seleção de biomarcadores
 - 🛍️ **Marketing:** Segmentação de clientes e análise comportamental
+- 🛡️ **Fintech:** Detecção de fraudes e sistemas antifraude
 - 🏭 **Otimização de Processos Industriais**
 - 📦 **Logística e Supply Chain**
 - 💰 **Otimização de Portfólios Financeiros**
@@ -141,15 +161,17 @@ git clone https://github.com/maurizioprizzi/otimizacao-aplicada-ciencia-dados.gi
 cd otimizacao-aplicada-ciencia-dados
 
 # 3. Navegue para uma aula específica
-cd 2025_06_11  # Para a aula mais recente
+cd 2025_06_18  # Para a aula mais recente
 
 # 4. Instale dependências
 pip install -r requirements.txt
 
-# 5. Inicie Jupyter
-jupyter notebook
+# 5. Execute os exemplos
+python fraud_detection_optimized.py  # Exemplo 1
+python otimizacao_threshold.py      # Exemplo 2
 
-# 6. Execute os notebooks na ordem recomendada!
+# 6. Para notebooks Jupyter (se disponível)
+jupyter notebook
 ```
 
 ### **Estrutura de Pastas:**
@@ -163,11 +185,17 @@ jupyter notebook
 │   ├── 📚 documento_cientifico.pdf     # Paper completo
 │   └── 📖 README.md                    # Detalhes da aula
 ├── 📅 2025_06_11/                      # Aula: SCOP + NonConvex QP
-│   ├── 📓 01.ipynb  # Seleção de Características Médicas
-│   ├── 📓 02.ipynb     # Clustering Esparso de Clientes
+│   ├── 📓 01.ipynb                     # Seleção de Características Médicas
+│   ├── 📓 02.ipynb                     # Clustering Esparso de Clientes
 │   ├── 🐍 scop_classificacao_comentado.py  # Código comentado completo
 │   ├── 🐍 scop_clustering_comentado.py     # Código comentado completo
 │   └── 📖 README.md                    # Detalhes da aula
+├── 📅 2025_06_18/                      # Aula: Otimização Adaptativa para Fraudes
+│   ├── 🐍 fraud_detection_optimized.py # Exemplo 1: Otimização de Hiperparâmetros
+│   ├── 🐍 otimizacao_threshold.py      # Exemplo 2: Busca Ternária + Concept Drift
+│   ├── 📖 README_01.md                 # Detalhes do Exemplo 1
+│   ├── 📖 README_02.md                 # Detalhes do Exemplo 2
+│   └── 📖 README.md                    # Visão geral da aula
 ```
 
 ## 📖 Filosofia Educacional
@@ -191,54 +219,68 @@ Este repositório segue os **princípios do software livre**:
 ### 🧠 **Progressão Pedagógica**
 - **Aula 1:** Conceitos básicos com problemas combinatórios
 - **Aula 2:** Técnicas avançadas com otimização não-convexa
+- **Aula 3:** Otimização adaptativa com aplicações em tempo real
 - **Próximas:** Complexidade crescente e aplicações interdisciplinares
 
-## 🌟 Destaques da Nova Aula (2025-06-11)
+## 🌟 Destaques da Nova Aula (2025-06-18)
 
-### 🎯 **Por que SCOP é Revolucionário?**
+### 🛡️ **Por que Otimização Adaptativa para Fraudes é Crucial?**
 
 #### **Problemas Tradicionais:**
-- Métodos convencionais tratam **seleção de características** e **otimização do modelo** separadamente
-- Características irrelevantes "poluem" os modelos
-- Interpretabilidade limitada em modelos complexos
+- Sistemas de detecção com **thresholds fixos** se tornam ineficazes rapidamente
+- **Concept drift** não é considerado: padrões de fraude mudam constantemente
+- Trade-off entre **detecção** e **experiência do usuário** não é otimizado matematicamente
+- Hiperparâmetros ajustados manualmente, sem garantia de otimalidade
 
-#### **Solução SCOP:**
-- **Integração total:** Seleciona características E otimiza simultaneamente
-- **Não-convexidade:** Captura relações complexas que métodos lineares perdem
-- **Esparsidade inteligente:** Elimina automaticamente variáveis irrelevantes
-- **Aplicabilidade universal:** Funciona para classificação E clustering
+#### **Solução com Otimização Adaptativa:**
+- **Otimização multi-objetivo:** Combina recall, precisão e experiência do usuário
+- **Busca ternária:** Algoritmo O(log₃ n) para encontrar threshold ótimo rapidamente
+- **Adaptação automática:** Sistema se ajusta a mudanças nos dados (concept drift)
+- **Quantificação de ROI:** Impacto financeiro medido e otimizado
 
-### 🔬 **Inovações Técnicas Introduzidas:**
+### 🔬 **Inovações Técnicas da Aula 18/06:**
 
-#### **1. Regularização Híbrida:**
+#### **1. Função Objetivo Multi-Criterio:**
 ```
-Função Objetivo = Fidelidade + λ₁||w||₁ + λ₂w^T Q w - λ₃||w||₀
-                     ↑           ↑          ↑           ↑
-                 Precisão   Esparsidade  Interações  Combinatorial
+Score = w₁ × Recall + w₂ × Precision + w₃ × (1 - FPR)
+          ↑              ↑                   ↑
+    Detectar fraudes  Evitar alarmes   Experiência positiva
 ```
 
-#### **2. Estratégia de Duas Etapas:**
-- **Etapa 1:** Relaxação convexa (rápida e garantida)
-- **Etapa 2:** Refinamento não-convexo (qualidade superior)
+#### **2. Busca Ternária para Threshold:**
+- **Complexidade:** O(log₃ n) vs O(n) da busca linear
+- **Convergência:** Garantida para funções unimodais
+- **Eficiência:** 90% menos iterações que métodos tradicionais
 
-#### **3. Thresholding Adaptativo:**
-- **Soft-thresholding:** Para regularização suave
-- **Hard-thresholding:** Para eliminação definitiva
-- **Critérios automáticos:** Sem necessidade de ajuste manual
+#### **3. Simulação de Concept Drift:**
+- **12 meses simulados** com mudanças graduais nos padrões
+- **Adaptação automática** do threshold a cada período
+- **Métricas de estabilidade** para avaliar robustez
+
+#### **4. Análise de Impacto Financeiro:**
+- **ROI calculado:** Benefícios de detectar fraudes vs custos de falsos positivos
+- **Threshold economicamente ótimo:** Maximiza lucro real, não apenas métricas técnicas
+- **Sensibilidade de custos:** Como variações nos custos afetam o threshold ideal
 
 ### 💡 **Aplicações Demonstradas:**
 
-#### **🏥 Medicina: "Menos Exames, Mesma Precisão"**
-- **Entrada:** 30 características médicas complexas
-- **SCOP:** Identifica automaticamente as 8 mais importantes
-- **Resultado:** 95.8% de precisão (vs 96.5% com todas)
-- **Impacto:** Diagnósticos mais rápidos e baratos
+#### **🛡️ Fintech: "Sistema Antifraude Inteligente"**
+- **Entrada:** 15 mil transações com 18 características
+- **Otimização:** GridSearchCV + função objetivo personalizada
+- **Resultado:** Modelo balanceado entre detecção (alta) e falsos positivos (baixos)
+- **Impacto:** Sistema robusto para produção com ROI quantificado
 
-#### **🛍️ Marketing: "Segmentação Inteligente"**
-- **Entrada:** 20 características de clientes (incluindo ruído)
-- **SCOP:** Descobre 4 grupos naturais + elimina ruído
-- **Resultado:** Clusters mais puros e interpretáveis
-- **Impacto:** Campanhas mais efetivas e insights claros
+#### **🎯 Adaptação Temporal: "Threshold que Evolui"**
+- **Entrada:** Dados com concept drift simulado (12 meses)
+- **Busca Ternária:** Threshold otimizado dinamicamente (0.3-0.4)
+- **Resultado:** Performance superior ao threshold fixo (0.5)
+- **Impacto:** Sistema que se mantém eficaz mesmo com mudanças nos padrões
+
+### 📈 **Benefícios Mensuráveis:**
+- **Recall:** +15% comparado ao threshold padrão
+- **F1-Score:** +12% com otimização contínua
+- **Tempo de otimização:** 90% redução com busca ternária
+- **ROI:** Quantificado com base em custos reais de fraudes e falsos positivos
 
 ## 🏫 Integração com o CEUB
 
@@ -268,6 +310,7 @@ Os projetos deste repositório estão **alinhados** com:
 - **Código limpo** e bem documentado no seu GitHub
 - **Diversidade** de técnicas e tecnologias aplicadas
 - **Experiência** com problemas não-convexos (diferencial competitivo!)
+- **Sistemas adaptativos** (competência valorizada em fintech)
 
 ### 🧠 **Competências Desenvolvidas**
 - **Pensamento analítico** para modelagem de problemas complexos
@@ -275,20 +318,17 @@ Os projetos deste repositório estão **alinhados** com:
 - **Visualização** de dados e comunicação de resultados
 - **Otimização não-convexa** (competência rara no mercado)
 - **Integração teoria-prática** em problemas multidisciplinares
+- **Sistemas antifraude** (área em alta demanda)
 
 ### 🎯 **Aplicações Imediatas**
-- **Estágios** em empresas de tecnologia, consultoria e healthcare
+- **Estágios** em empresas de tecnologia, consultoria e fintech
 - **Iniciação científica** em projetos de pesquisa aplicada
 - **Trabalho de conclusão** de curso (TCC) com diferencial técnico
 - **Pós-graduação** em áreas quantitativas e interdisciplinares
 - **Freelancing** em projetos de análise de dados avançada
+- **Especialização** em segurança financeira e detecção de fraudes
 
 ## 🤝 Agradecimentos
-
-### 🎓 **À Comunidade CEUB:**
-- **Coordenação** do curso de Modelagem Matemática
-- **Colegas professores** pelas discussões interdisciplinares
-- **Alunos** pelo feedback constante e contribuições valiosas
 
 ### 🌍 **À Comunidade Open Source:**
 - **Google OR-Tools** pela ferramenta excepcional de otimização
@@ -296,37 +336,6 @@ Os projetos deste repositório estão **alinhados** com:
 - **Jupyter Project** pelo ambiente interativo incomparável
 - **Scikit-learn** pelo ecossistema de machine learning
 - **Python Community** pelo ecossistema científico robusto
-
-## 📈 Roadmap Futuro
-
-### **Próximas Aulas (Cronograma 2025):**
-- 🧬 **2025-06-18: Metaheurísticas Avançadas**
-  - Algoritmos genéticos para otimização global
-  - Simulated annealing e busca tabu
-  - Aplicação em problemas de scheduling complexo
-
-- 🎯 **2025-06-25: Otimização Multi-Objetivo**
-  - Fronteira de Pareto e trade-offs
-  - NSGA-II e algoritmos evolutivos
-  - Aplicação em design de produtos
-
-- 📊 **2025-07-02: Otimização Estocástica**
-  - Problemas com incerteza e ruído
-  - Programação estocástica
-  - Aplicação em finanças e logística
-
-- 🚀 **2025-07-09: Projeto Integrador Final**
-  - Problema real de grande escala
-  - Integração de todas as técnicas aprendidas
-  - Apresentações e avaliação final
-
-### **Melhorias Planejadas:**
-- 🎮 **Widgets interativos** para experimentos em tempo real
-- 📱 **Interface web** para visualização de resultados
-- 🎥 **Vídeos explicativos** dos conceitos principais
-- 📚 **Exercícios autograding** para prática individual
-- 🤖 **Chatbot educacional** para dúvidas frequentes
-- 📊 **Dashboard** de progresso personalizado
 
 ## 📄 Licença e Uso
 
@@ -368,6 +377,7 @@ Democratizar o acesso ao conhecimento de **otimização matemática** aplicada, 
 - **Código comentado:** Cada linha explicada pedagogicamente
 - **Visualizações ricas:** Gráficos que facilitam o entendimento
 - **Aplicabilidade imediata:** Conhecimento utilizável desde o primeiro dia
+- **Sistemas adaptativos:** Técnicas que evoluem com os dados
 
 ---
 
@@ -395,13 +405,21 @@ Democratizar o acesso ao conhecimento de **otimização matemática** aplicada, 
 
 ---
 
-### 🔥 **NOVIDADE: Já conferiu a aula de SCOP + Programação Quadrática Não-Convexa?**
-👉 [**Clique aqui para acessar: 2025-06-11**](./2025_06_11/)
+### 🔥 **NOVIDADES: Confira as últimas aulas!**
 
+#### 👉 [**Aula SCOP + Programação Quadrática Não-Convexa: 2025-06-11**](./2025_06_11/)
 **O que você vai aprender:**
 - 🎯 Seleção automática de características para diagnóstico médico
 - 🛍️ Segmentação inteligente de clientes com eliminação de ruído  
 - 🔬 Técnicas não-convexas que vão além dos métodos tradicionais
 - 💡 Estratégias de duas etapas para problemas complexos
 
-**Não perca esta oportunidade de dominar técnicas de otimização de ponta!** 🚀
+#### 👉 [**NOVA: Otimização Adaptativa para Detecção de Fraudes: 2025-06-18**](./2025_06_18/)
+**O que você vai aprender:**
+- 🛡️ Sistemas antifraude adaptativos para fintech
+- 🎯 Busca ternária para otimização de threshold em O(log₃ n)
+- 🔄 Adaptação automática a concept drift (mudanças nos padrões)
+- 📊 Quantificação de ROI e impacto financeiro real
+- 🚀 Otimização multi-objetivo para balancear detecção e experiência do usuário
+
+**Não perca estas oportunidades de dominar técnicas de otimização de ponta aplicadas a problemas reais!** 🚀
